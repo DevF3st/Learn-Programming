@@ -4,7 +4,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/DevF3st/Learn-Programming?style=for-the-badge&color=blue)](https://github.com/DevF3st/Learn-Programming/network)
 [![GitHub stars](https://img.shields.io/github/stars/DevF3st/Learn-Programming?style=for-the-badge&color=yellow)](https://github.com/DevF3st/Learn-Programming/stargazers)  
 
-# Hacktoberfest 2022 - Learn-Programming
+# Hacktoberfest 2022 - Learn Programming
 ## Learn every Programming Language.  
 
 ## Steps to follow :scroll:
