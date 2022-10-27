@@ -5,18 +5,17 @@
 [![GitHub stars](https://img.shields.io/github/stars/DevF3st/Learn-Programming?style=for-the-badge&color=yellow)](https://github.com/DevF3st/Learn-Programming/stargazers)  
 
 # Hacktoberfest 2022 - Learn-Programming
-## Let's do code in every Programming Language.  
+## Learn every Programming Language.  
 
 ## Steps to follow :scroll:
 
-### 1. Register for Hacktoberfest
-You can register from [here](https://hacktoberfest.com).
+### 1. Register for Hacktoberfest [here](https://hacktoberfest.com)
 
 ### 2. Give Star :star: for this [repository](https://github.com/DevF3st/Learn-Programming)  
 
 ### 3. Fork it :fork_and_knife:
 
-You can get your own fork/copy of [Lets-Do-Code](https://github.com/DevF3st/Learn-Programming) by clicking the <kbd><b>Fork</b></kbd> button on top up bar.
+You can get your own fork/copy of [Learn-Programming](https://github.com/DevF3st/Learn-Programming) by clicking the <kbd><b>Fork</b></kbd> button on top up bar.
 
  [![Fork Button](https://github.com/DevF3st/Learn-Programming/blob/main/_doc/fork.jpg)](https://github.com/DevF3st/Learn-Programming)
 
