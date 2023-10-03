@@ -1,10 +1,10 @@
-![header](https://github.com/DevF3st/Learn-Programming/blob/main/_doc/cover.jpg)  
+![header](https://github.com/DevF3st/Learn-Programming/blob/main/_doc/cover2023.png)  
 
 [![GitHub issues](https://img.shields.io/github/issues/DevF3st/Learn-Programming?style=for-the-badge&color=important)](https://github.com/DevF3st/Learn-Programming/issues)
 [![GitHub forks](https://img.shields.io/github/forks/DevF3st/Learn-Programming?style=for-the-badge&color=blue)](https://github.com/DevF3st/Learn-Programming/network)
 [![GitHub stars](https://img.shields.io/github/stars/DevF3st/Learn-Programming?style=for-the-badge&color=yellow)](https://github.com/DevF3st/Learn-Programming/stargazers)  
 
-# Hacktoberfest 2022 - Learn Programming
+# Hacktoberfest 2023 - Learn Programming
 ## Learn every Programming Language.  
 
 ## Steps to follow :scroll:
