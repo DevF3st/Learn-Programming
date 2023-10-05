@@ -1,44 +1,71 @@
-//Sorting elements of Array in ascending order using Bubble sort in java
-//Number of rounds = n-1  , where n is number of elements in array
+// import the Class
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class BubbleSort {
+class Main {
 
-	void bubbleSort(int[] array) {
-		
-		   for(int i=0; i<array.length; i++) {
-			     int flag =0;            // for the case when array is sorted before completion of all the rounds
-			for(int j=0; j<array.length-1-i; j++) {
-				if(array[j] > array[j+1]) {
-					int temp = array[j];
-					array[j] = array[j+1];
-					array[j+1] = temp;
-					flag = 1;
-				}
-				}
-			if(flag == 0)
-				break;
-			}
-			
+  // create an object of scanner
+  // to take input from the user
+  Scanner input = new Scanner(System.in);
+
+  // method to perform bubble sort
+  void bubbleSort(int array[]) {
+    int size = array.length;
+
+    // for ascending or descending sort
+    System.out.println("Choose Sorting Order:");
+    System.out.println("1 for Ascending \n2 for Descending");
+    int sortOrder = input.nextInt();
+
+    // run loops two times
+    // first loop access each element of the array
+    for (int i = 0; i < size - 1; i++)
+
+      // second loop performs the comparison in each iteration
+      for (int j = 0; j < size - i - 1; j++)
+
+        // sort the array in ascending order
+        if (sortOrder == 1) {
+          // compares the adjacent element
+          if (array[j] > array[j + 1]) {
+
+            // swap if left element is greater than right
+            int temp = array[j];
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
+          }
+        }
+
+        // sort the array in descending order
+        else {
+          // compares the adjacent element
+          if (array[j] < array[j + 1]) {
+
+            // swap if left element is smaller than right
+            int temp = array[j];
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
+          }
+        }
+
+  }
+
+  // driver code
+  public static void main(String args[]) {
+
+    // create an array
+    int[] data = { -2, 45, 0, 11, -9 };
+
+    // create an object of Main class
+    Main bs = new Main();
+
+    // call the method bubbleSort using object bs
+    // pass the array as the method argument
+    bs.bubbleSort(data);
+    System.out.println("Sorted Array in Ascending Order:");
+
+    // call toString() of Arrays class
+    // to convert data into the string
+    System.out.println(Arrays.toString(data));
+  }
 }
-	public static void main(String[] args) {
-		BubbleSort bs = new BubbleSort();
-		int arr[]= {32,19,26,12,5,-1};
-		 System.out.println("Array Before Sorting...");
-			for(int i:arr)
-				System.out.print(i+ " ");
-			System.out.println();
-			
-			 System.out.println(" Array After Sorting...");
-	                bs.bubbleSort(arr);
-	                      for(int i:arr)
-		                     System.out.print(i+ " ");
-
-	}
-
-}
-
-//Best case Time complexity :-  O(n)
-//Avg case Time complexity :-  O(n²)
-//Worst case Time complexity :-  O(n²)
-
-//Space complexity :-  O(1)
