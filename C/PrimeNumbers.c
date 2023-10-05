@@ -2,7 +2,7 @@
 
 int checkPrime(int num)
 {
-    // 0, 1 and negative numbers are not prime
+    // 0, 1 and negative numbers are not primes
     if(num < 2){
         return 0;
     }
