@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func fibonacci(n int) []int {
+    fib := make([]int, n)
+    fib[0], fib[1] = 0, 1
+
+    for i := 2; i < n; i++ {
+        fib[i] = fib[i-1] + fib[i-2]
+    }
+
+    return fib
+}
+
+func main() {
+    n := 10 // Change this value to generate a different number of Fibonacci numbers
+
+    if n <= 0 {
+        fmt.Println("Invalid input. Please provide a positive integer.")
+        return
+    }
+
+    fmt.Printf("First %d Fibonacci numbers:\n", n)
+    fib := fibonacci(n)
+    for _, num := range fib {
+        fmt.Printf("%d ", num)
+    }
+    fmt.Println()
+}
