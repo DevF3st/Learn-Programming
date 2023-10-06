@@ -30,6 +30,7 @@
 *.iml
 .gradle
 
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
