@@ -1,64 +1,56 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<cstdlib>
+
 using namespace std;
 
-// function to swap two elements
-void swap(int* a, int* b)
-{
-	int t = *a;
-	*a = *b;
-	*b = t;
-}
-int partition(int arr[], int low, int high)
-{
-	int pivot = arr[high]; // pivot
-	int i
-		= (low
-		- 1); // Index of smaller element and indicates
-				// the right position of pivot found so far
-
-	for (int j = low; j <= high - 1; j++) {
-		// If current element is smaller than the pivot
-		if (arr[j] < pivot) {
-			i++; // increment index of smaller element
-			swap(&arr[i], &arr[j]);
-		}
-	}
-	swap(&arr[i + 1], &arr[high]);
-	return (i + 1);
+void swap(int *a, int *b) {
+   int temp;
+   temp = *a;
+   *a = *b;
+   *b = temp;
 }
 
-/* The main function that implements QuickSort
-arr[] --> Array to be sorted,
-low --> Starting index,
-high --> Ending index */
-void quickSort(int arr[], int low, int high)
-{
-	if (low < high) {
-		/* pi is partitioning index, arr[p] is now
-		at right place */
-		int pi = partition(arr, low, high);
-
-		// Separately sort elements before
-		// partition and after partition
-		quickSort(arr, low, pi - 1);
-		quickSort(arr, pi + 1, high);
-	}
+int Partition(int a[], int l, int h) {
+   int pivot, index, i;
+   index = l;
+   pivot = h;
+   for(i = l; i < h; i++) {
+      if(a[i] < a[pivot]) {
+         swap(&a[i], &a[index]);
+         index++;
+      }
+   }
+   swap(&a[pivot], &a[index]);
+   return index;
 }
-
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-	int i;
-	for (i = 0; i < size; i++)
-		cout << arr[i] << " ";
-	cout << endl;
+int RandomPivotPartition(int a[], int l, int h) {
+   int pvt, n, temp;
+   n = rand();
+   pvt = l + n%(h-l+1);
+   swap(&a[h], &a[pvt]);
+   return Partition(a, l, h);
 }
-int main()
-{
-	int arr[] = { 10, 7, 8, 9, 1, 5 };
-	int n = sizeof(arr) / sizeof(arr[0]);
-	quickSort(arr, 0, n - 1);
-	cout << "Sorted array: \n";
-	printArray(arr, n);
-	return 0;
+int QuickSort(int a[], int l, int h) {
+   int pindex;
+   if(l < h) {
+      pindex = RandomPivotPartition(a, l, h);
+      QuickSort(a, l, pindex-1);
+      QuickSort(a, pindex+1, h);
+   }
+   return 0;
+}
+int main() {
+   int n, i;
+   cout<<"\nEnter the number of data element to be sorted: ";
+   cin>>n;
+   int arr[n];
+   for(i = 0; i < n; i++) {
+      cout<<"Enter element "<<i+1<<": ";
+      cin>>arr[i];
+   }
+   QuickSort(arr, 0, n-1);
+   cout<<"\nSorted Data ";
+   for (i = 0; i < n; i++)
+      cout<<"->"<<arr[i];
+   return 0;
 }
